@@ -3,86 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Footer Example</title>
+<title>Responsive Footer</title>
 
 <style>
-    body{
-        margin:0;
-        font-family: Arial, sans-serif;
-    }
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+}
 
-    /* Footer */
-    footer{
-        background-color:#222;
-        color:white;
-        padding:30px 20px;
-    }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-    .footer-container{
-        display:flex;
-        justify-content:space-between;
-        flex-wrap:wrap;
-        gap:20px;
-    }
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
 
-    .footer-section{
-        flex:1;
-        min-width:250px;
-    }
+.footer-section h3 {
+    margin-bottom: 15px;
+}
 
-    .footer-section h3{
-        margin-bottom:15px;
-    }
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
 
-    .footer-section ul{
-        list-style:none;
-        padding:0;
-    }
+.footer-section ul li {
+    margin-bottom: 10px;
+}
 
-    .footer-section ul li{
-        margin-bottom:10px;
-    }
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    .footer-section ul li a{
-        color:white;
-        text-decoration:none;
-        transition:0.3s;
-    }
+/* Hover Effect */
+.footer-section ul li a:hover {
+    color: #ffd700;
+    padding-left: 5px;
+}
 
-    /* Hover Effect */
-    .footer-section ul li a:hover{
-        color:#ffd700;
-        padding-left:5px;
-    }
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
 
-    .footer-bottom{
-        text-align:center;
-        margin-top:20px;
-        border-top:1px solid #555;
-        padding-top:15px;
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
-
-    /* Responsive สำหรับมือถือ */
-    @media (max-width:768px){
-        .footer-container{
-            flex-direction:column;
-            text-align:center;
-        }
-    }
+}
 </style>
+
 </head>
 <body>
 
-<footer>
+<footer class="footer">
     <div class="footer-container">
 
-        <!-- ข้อมูลหน่วยงาน -->
+        <!-- ข้อมูลเกี่ยวกับหน่วยงาน -->
         <div class="footer-section">
             <h3>ข้อมูลเกี่ยวกับหน่วยงาน</h3>
             <p>
-                วิทยาลัยเทคโนโลยีตัวอย่าง
-                มุ่งเน้นการพัฒนาทักษะด้านเทคโนโลยี
-                และนวัตกรรมเพื่ออนาคต
+                วิทยาลัยเทคโนโลยีตัวอย่าง มุ่งเน้นการพัฒนาความรู้
+                และทักษะด้านเทคโนโลยีเพื่ออนาคต
             </p>
         </div>
 
@@ -108,7 +103,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 เว็บไซต์ตัวอย่าง สงวนลิขสิทธิ์</p>
+        <p>&copy; 2025 เว็บไซต์ตัวอย่าง</p>
     </div>
 </footer>
 
